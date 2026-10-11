@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f5">
+  <title>A Little Question for You 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
+  <main class="wrap">
+    <div class="top-note">💗 Criminology x Tourism Management 💌</div>
+    <div class="music-row"><button class="music-btn" id="musicToggle" type="button" aria-pressed="false">♫ Play a little background tune</button></div>
+
+    <section class="card" id="questionCard">
+      <div class="sticker" aria-hidden="true">💌</div>
+      <h1>Hey, Kimchi!</h1>
+      <p class="lead">I have a little question for you… and I made a whole website instead of just asking normally. Para cutie siya hehe... UwU </p>
+      <div class="editable-note">
+        <strong>💗 A little message for you</strong>
+        <span id="personalMessage">I’ve been wanting to spend some time with you, just the two of us. Nothing too fancy, just good conversations, a little walk, and maybe something nice to eat or drink.</span>
+      </div>
+      <h2>Would you go on a date with me?</h2>
+      <p class="lead small-lead">No pressure, okay? I just wanted to ask you in a cute way. 🥹</p>
+      <div class="buttons" id="answerButtons">
+        <button class="btn btn-yes" id="yesBtn" type="button">YES! 💗</button>
+        <button class="btn btn-no" id="noBtn" type="button">No 🙈</button>
+      </div>
+      <p class="tiny" id="tinyHint">Choose honestly. My heart is doing a backflip.</p>
+    </section>
+
+    <section class="card date-card section hidden" id="dateCard">
+      <div class="intro">
+        <div class="sticker" aria-hidden="true">🥹💖</div>
+        <h1>WAIT, REALLY?!</h1>
+        <h2>Let's plan our little date</h2>
+        <p class="lead small-lead">Pick a date and time that works for you. We can go for a walk, talk about anything, mag sumbagay or mang hold-up tas night market. ☕</p>
+      </div>
+      <form id="dateForm">
+        <div class="form-grid">
+          <div class="field">
+            <label for="selectedDate">What day works for you?</label>
+            <select id="selectedDate" name="selected_date" required>
+              <option value="" selected disabled>Choose a date 💗</option>
+              <option>Saturday, October 16, 2026</option>
+              <option>Sunday, October 17, 2026</option>
+              <option>Saturday, October 18, 2026</option>
+              <option>Another date (tell me below)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="selectedTime">What time do you prefer?</label>
+            <select id="selectedTime" name="selected_time" required>
+              <option value="" selected disabled>Choose a time ✨</option>
+              <option>12:00 PM</option>
+              <option>1:00 PM</option>
+              <option>2:00 PM</option>
+              <option>3:00 PM</option>
+              <option>4:00 PM</option>
+              <option>Another time (tell me below)</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="extraMessage">Any note or another date/time? (optional)</label>
+            <textarea id="extraMessage" name="extra_message" placeholder="You can tell me what works best for you…"></textarea>
+          </div>
+        </div>
+        <div class="secret">🤫 <strong>Ilaag kos imong mga fav spot sa colon kay mag sumbagay ta</strong> </div>
+        <div class="submit-row"><button class="btn btn-yes" id="sendBtn" type="submit">Send my answer to Febbie 💌</button></div>
+        <p class="status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="card success section hidden" id="successCard">
+      <div class="sticker" aria-hidden="true">💘</div>
+      <h1>It's a date!</h1>
+      <p class="lead">Your answer has been sent. Now someone has to plan a cute date and try not to overthink every single detail. 👀</p>
+      <p id="chosenDetails"></p>
+      <p>Thank you for giving me a chance to make a little memory with you. 💗</p>
+    </section>
+    <div class="footer">made with ♡ by Febbie</div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
